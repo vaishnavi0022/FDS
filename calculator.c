@@ -58,6 +58,77 @@ int main()
 }
 
 
+#include <stdio.h>
+int main()
+ {  int a[10][10] ;
+int n,m,i,j;
+int flag=0 ;
+int p=0 ;
+int k =0 ;
 
+   
+   printf("Enter no of rows\n") ;
+   scanf("%d",&n) ;
+ printf("Enter no of columns\n") ;
+   scanf("%d",&m) ;
+  
+ 
+    printf("Enter an array \n") ;
+    for(i=0;i<n;i++)
+  {
+     for(j=0;j<m;j++)
+   {
+     scanf("%d",&a[i][j]) ;
+
+        if(a[i][j]!=0)
+            k++;
+
+   }
+ 
+  }
+
+
+/*for(i=0;i<n;i++)
+{
+     for(j=0;j<m;j++)
+     {
+        if(a[i][j]==0)
+            flag++ ;
+     }
+    
+}
+   if(flag>((n*m)/2))
+     printf("matrix is sparse matrix\n") ;
+ else 
+printf("matrix is not  sparse matrix\n") ;*/
+int s[k][3] ;
+for(i=0;i<n;i++)
+{
+     for(j=0;j<m;j++)
+     {
+        if(a[i][j]!=0)
+
+          {  s[p][0]=i ;
+            s[p][1]=j ;  
+            s[p][2]=a[i][j] ;
+            p++ ;
+     }
+    }
+}
+printf("matrix is  \n") ;
+    for(i=0;i<k;i++)
+  {
+     for(j=0;j<3;j++)
+   {
+     printf("%d\t",s[i][j]) ;
+     
+
+   }
+         printf("\n") ;
+  }
+
+
+return 0;
+}
 
 
